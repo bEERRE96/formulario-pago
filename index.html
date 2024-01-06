@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Formulario de Pagos</title>
+</head>
+
+<body>
+
+    <form id="mainForm">
+        <div class="form-group">
+            <label for="cliente">Cliente:</label>
+            <input type="text" id="cliente" placeholder="" required>
+        </div>
+        <div class="form-group">
+            <label for="materia">Materia:</label>
+            <input type="text" id="materia" placeholder="" required>
+        </div>
+        <div class="form-group">
+            <label for="estado">Estado:</label>
+            <select id="estado" required>
+                <option value="judicial">Judicial</option>
+                <option value="extrajudicial">Extrajudicial</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="fechaConfirmacion">Fecha de confirmacion:</label>
+            <input type="date" id="fechaConfirmacion" required>
+        </div>
+        <div class="form-group">
+            <label for="situacion">Situacion:</label>
+            <input type="text" id="situacion" value="En tramite" readonly>
+        </div>
+        <div class="form-group">
+            <label for="moneda">Moneda:</label>
+            <select id="moneda" required>
+                <option value="ARS">ARS</option>
+                <option value="USD">USD</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="presupuesto">Presupuesto:</label>
+            <input type="number" id="presupuesto" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="comentarios">Comentarios:</label>
+            <input type="text" id="comentarios">
+        </div>
+        <div class="form-group">
+            <label for="cuota">Cuota:</label>
+            <input type="text" id="cuota" readonly>
+        </div>
+        <div class="form-group">
+            <label for="cantCuotas">Cant Cuotas:</label>
+            <input type="number" id="cantCuotas" placeholder="" required>
+        </div>
+        <div class="form-group">
+            <label for="numCuota">N° Cuota:</label>
+            <input type="number" id="numCuota" placeholder="" required>
+        </div>
+        <div class="form-group">
+            <label for="saldo">Saldo:</label>
+            <input type="number" id="saldo" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="vencimiento">Vencimiento:</label>
+            <input type="date" id="vencimiento" required>
+        </div>
+        <button type="button" onclick="agregarExpediente()">Agregar</button>
+    </form>
+
+    <table id="expedientesTable">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Materia</th>
+                <th>Estado</th>
+                <th>Fecha de Confirmacion</th>
+                <th>Situacion</th>
+                <th>Moneda</th>
+                <th>Presupuesto</th>
+                <th>Comentarios</th>
+                <th>Cuota</th>
+                <th>Cant Cuotas</th>
+                <th>N° Cuota</th>
+                <th>Vencimiento</th>
+                <th>Atraso de pago</th>
+                <th>Saldo</th>
+                <th>Acciones</th>
+
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
